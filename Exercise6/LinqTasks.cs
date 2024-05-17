@@ -201,7 +201,12 @@ namespace Exercise6
         /// </summary>
         public static IEnumerable<object> Task5()
         {
-            IEnumerable<object> result = null;
+            //Method syntax
+            var methodSyntax = Emps.Select(e => new { Nazwisko = e.Ename, Praca = e.Job });
+                
+            //Query syntax
+            var querySyntax = from e in Emps select new { Nazwisko = e.Ename, Praca = e.Job };
+            IEnumerable<object> result = querySyntax;
             return result;
         }
 
