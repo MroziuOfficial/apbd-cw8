@@ -164,7 +164,8 @@ namespace Exercise6
         /// </summary>
         public static IEnumerable<Emp> Task1()
         {
-            IEnumerable<Emp> result = null;
+            var methodSyntax = Emps.Where(e => e.Job.Equals("Backend programmer"));
+            IEnumerable<Emp> result = methodSyntax;
             return result;
         }
 
@@ -190,7 +191,8 @@ namespace Exercise6
         /// </summary>
         public static int Task3()
         {
-            int result = 0;
+            var methodSyntax = Emps.Max(e => e.Salary);
+            int result = methodSyntax;
             return result;
         }
 
