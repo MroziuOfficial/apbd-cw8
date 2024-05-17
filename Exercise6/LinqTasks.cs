@@ -238,7 +238,8 @@ namespace Exercise6
         /// </summary>
         public static IEnumerable<object> Task7()
         {
-            IEnumerable<object> result = null;
+            var methodSyntax = Emps.GroupBy(e => e.Job).Select(e => new { Praca = e.Key, LiczbaPracownikow = e.Count() });
+            IEnumerable<object> result = methodSyntax;
             return result;
         }
 
