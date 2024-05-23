@@ -249,7 +249,8 @@ namespace Exercise6
         /// </summary>
         public static bool Task8()
         {
-            bool result = false;
+            var methodSyntax = Emps.Any(e => e.Job == "Backend programmer");
+            bool result = methodSyntax;
             return result;
         }
 
